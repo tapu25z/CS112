@@ -115,9 +115,6 @@ F(n) &=  \frac{1}{\sqrt{5}} \big(\frac{1 + \sqrt{5}}{2}\big)^n  -\frac{1}{\sqrt{
 $$
 với $\phi =  \frac{1 + \sqrt{5}}{2}$ và $\hat{\phi} ^n = \frac{1}{\phi}$. Đây chính là phương trình Binet.
 
-# Quiz tại lớp
-Link bộ câu hỏi:
-https://dashboard.blooket.com/my-sets
 
 **Các bài toán kinh điển**
 > Nhờ 3 nhóm lên phân tích bằng 3 cách khác nhau
@@ -134,12 +131,6 @@ von Neumann’s neighborhood revisited:
 Cho một ma trận ô vuông màu trắng N * N. Bắt đầu với một ô vuông bị tô đen, với mỗi một đơn vị thời gian nó sẽ tự loan màu sang các ô khác, hỏi sau n đơn vị thời gian thì có bao nhiêu ô bị loan màu.
 Tìm ra công thức truy hồi và tìm độ phức tạp thời gian.
 
-
-**Đáp án**: 
-$T(0) = 1$
-$T(n) = T(n - 1) + O(4n)$
-$T(x) = 2x^2 + 2x + 1$
-
 **BÀI 2**: 
 Một đầu bếp cần nấu n chiếc hamburger trên một chiếc chảo nhỏ có sức chứa tối đa 2 chiếc cùng lúc. Mỗi chiếc hamburger cần được nấu cả hai mặt, và thời gian để nấu một mặt (cho 1 hoặc 2 chiếc) là 1 phút.
 
@@ -148,34 +139,12 @@ Trường hợp cơ sở (n ≤ 2): Nếu có 1 hoặc 2 chiếc, nấu tuần t
 Đệ quy (n > 2): Chọn 2 chiếc bất kỳ, nấu cả 2 mặt của chúng. Sau đó, giải quyết bài toán còn lại cho n - 2 chiếc.
 
 Yêu cầu:
-a. Xây dựng và giải hệ thức truy hồi:
+- a. Xây dựng và giải hệ thức truy hồi:
 Thiết lập và giải hệ thức truy hồi T(n) để xác định tổng thời gian nấu n chiếc hamburger theo thuật toán đã cho.
-b. Phân tích tính tối ưu của thuật toán:
+- b. Phân tích tính tối ưu của thuật toán:
 Giải thích tại sao thuật toán đệ quy trên không phải là chiến lược tối ưu để giảm thiểu tổng thời gian nấu.
-c. Đề xuất thuật toán tối ưu:
+- c. Đề xuất thuật toán tối ưu:
 Xây dựng một thuật toán khác để hoàn thành công việc trong thời gian ngắn nhất có thể và chứng minh tính hiệu quả của nó.
-
-**Đáp án**: 
-a. $T(0) = 0, T(1) = T(2) = 2$
-$T(n) = T(n - 2) + 2$
-Giải công thức truy hồi: $T(n) = n + (n\&1)$
-
-
-b. Không tối ưu vì nếu nấu $n = 2k + 1$ chiếc, tới chiếc cuối cùng thì sẽ lẻ ra 1 cái và tốn thêm 2 phút để nấu nó.
-Ví dụ: $T(3) = T(1) + 2 = 2 + 2 = 4$ phút
-Phút 1: Nấu mặt A của chiếc hamburger 1 và 2 (chảo không dư chỗ).
-Phút 2: Nấu mặt B của chiếc hamburger 1 và 2 (chảo không dư chỗ).
-Phút 3: Nấu mặt A của chiếc hamburger 3 (chảo dư 1 chỗ).
-Phút 4: Nấu mặt B của chiếc hamburger 3 (chảo dư 1 chỗ).
-
-c. Luôn xây dựng được cách làm chỉ với n bước dù chẵn hay lẻ cái hamburger. 
-
-Ví dụ: 
-Phút 1: Nấu mặt A của chiếc hamburger 1 và 2.
-Phút 2: Nấu mặt B của chiếc hamburger 1 và mặt A của chiếc hamburger 3.
-Phút 3: Nấu mặt B của chiếc hamburger 2 và 3.
-
-Đáp án: 
 
 BÀI 3. Cho đoạn code
 ```python=
@@ -189,35 +158,5 @@ def countPairs(n):
 ```
 Hãy phân tích độ phức tap thời gian thuật toán theo quy trình chung. 
 
+Link drive các file liên quan khác: https://drive.google.com/drive/folders/1IuP9MwowUDMST8vLPuAkoKHCV9SJwEW_?usp=sharing
 
-Đáp án:
-Xác định theo 5 bước
-1. Tham số xác định kích thước là n
-2. Phép toán cơ bản của hàm $M$ là phép cộng
-3. Với các đầu vào khác nhau nhưng cùng 1 kích thước thì độ phức tạp của phép toán không thay đổi, vì vậy không cần phân tích độ phức tạp tốt nhất, xấu nhất, trung bình.
-4. Gọi $F(i)$ là hàm số, $\; M(i)$ là độ phức tạp thời gian để tính toán hàm $F(i)$. 
-   $F(0) = F(1) = 1, \quad F(i) = \sum^{n-1}_{0} F(i) * F(n - 1 - i)$ 
-   Trường hợp cơ sở: $M(0) = M(1) = O(1)$
-5. Giải phương trình truy hồi
-   $\Leftrightarrow F(i) = F(0) \times F(n-1) + F(1) \times F(n - 2) + ... + F(n-2) \times F(1) + F(n - 1) \times F(0)$
-    $\Rightarrow M(i) = 2 \times \sum_{0}^{n - 1}M(i) + O(n)$
-    
-Đặt $S(n) = \sum_{0}^{n}M(i)$
-nên ta có $M(n) = S(n) - S(n - 1)$ và $M(n)=2 \times S(n-1) + O(n)$
-$\Leftrightarrow S(n) = M(n) + S(n - 1) = 3 \times S(n-1) + O(n)$
-
-- Áp dụng Phương pháp hệ thức truy hồi bậc hai với hệ số hằng
-với phương trình $S(n) = 3 \times S(n - 1)$
-$\Leftrightarrow S(n) - 3 \times S(n - 1) = 0$
-Ta có phương trình đặc trưng: $r^2 - 3r = 0$ $\Leftrightarrow r_1 = 3, \; r_2 = 0$
-Vì $r_1, r_2$ là 2 nghiệm thực phân biệt nên $S(n) = O(\alpha 3^n$).
-Có $M(i) = S(n) - S(n - 1) = O(\alpha 3^n) - O(\alpha3^{n-1}) \approx O(\alpha 3^n)$. 
-Giả $M(1) = 1$, tìm được $\alpha = \frac{1}{3}$ thì $M(i) \approx O(3^n)$
-
-
-- Nhận thấy tại node $n$, chia thành 2 node con $n/2$ vì thế số lượng node tại mỗi tầng l sẽ là $2^{l - 1}$.
-- Gọi $T(n)$ là số lượng thao tác (thời gian thực hiện) cho hàm F(n), có:
-$$
-T(n) = \sum_{l = 0}^{n - 1} 2^{l} = 2^n - 1
-$$ 
-Các bạn có thể tự chứng minh tại sao công thức trên đúng.
