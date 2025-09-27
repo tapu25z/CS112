@@ -66,54 +66,74 @@ Brainstorm những phương pháp để giải công thức truy hồi.
 - Trường hợp 2: Nếu $f(n)$ cùng bậc tăng trưởng với $n^{\log_b{a}}$ thì $T(n) = O(n^{\log_b{a}}\log{n})$
 - Trường hợp 3: Nếu $f(n)$ lớn hơn $n^{\log_b{a}}$ một cách đáng kể thì $T(n) = O(f(n))$
 
-## Phương pháp hệ thức truy hồi bậc hai với hệ số hằng
-**Dạng tổng quát**: $ax(n) + bx(n − 1) + cx(n − 2) = f(n)$
-**Mục tiêu phương pháp**: Tìm ra công thức dạng đóng của f(n) 
+## Phương pháp hệ thức truy hồi bậc hai với hệ số hằng  
 
-**Cách giải với hệ thuần nhất f(n) = 0**
-- Sử dụng phương trình đặc trưng $ar^2 + br + c = 0$
-- Giải phương trình trên cho ra 2 nghiệm $r_1, r_2$
-- Với 3 trường hợp nghiệm của phương trình đặc trưng:
-    - Trường hợp 1: Nếu $r_1, r_2$ là số thực phân biệt thì:
-        $a_n = \alpha r_1^n$ + $\beta r_2^n$
-    - Trường hợp 2: Nếu $r_1 = r_2$ là số thực thì:
-        $a_n = \alpha r^n$ + $\beta nr^n$
-    - Trường hợp 3: Nếu $r_1, r_2 = u \pm iv$ là số phức phân biệt thì:
-        $a_n = \gamma^n[\alpha \cos \theta + \beta \sin \theta]$ với $\gamma = \sqrt{u^2 + v^2}, \theta = \arctan{\frac{v}u}$
+**Dạng tổng quát**:  
+$$ax(n) + bx(n-1) + cx(n-2) = f(n)$$  
 
+**Mục tiêu phương pháp**: Tìm ra công thức dạng đóng của $f(n)$.  
 
- **Ví dụ**: Thử với phương trình Fibonacci
-- $F(n) = F(n - 1) + F(n - 2)$ với $F(0) = 0, F(1) = 1$
-$\rightarrow F(n) - F(n - 1) - F(n - 2) = 0$
-- Phương trình đặc trưng: $r^2 - r - 1 = 0$ với nghiệm $r_{1, 2} = \frac{1 \pm \sqrt{1 - 4(-1)}}{2} = \frac{1 \pm \sqrt{5}}{2}$
-- Vì $r_1, r_2$ là 2 nghiệm thực phân biệt nên áp dụng trường hợp 1:
-$$F(n) = \alpha \big(\frac{1 + \sqrt{5}}{2}\big)^n + \beta \big(\frac{1- \sqrt{5}}{2}\big)^n$$
-- Và bằng trường hợp cơ sở F(0) = 0, F(1) = 1, sẽ tính được $\alpha$ và $\beta$.
-Thay x = 0, x = 1 vào F(x) ta có:
-\begin{aligned}
-    \Leftrightarrow & \begin{cases} 
-        F(0) = \alpha \big(\frac{1 + \sqrt{5}}{2}\big)^0 + \beta \big(\frac{1- \sqrt{5}}{2}\big)^0 = 0 \\
-        F(1) = \alpha \big(\frac{1 + \sqrt{5}}{2}\big)^1 + \beta \big(\frac{1- \sqrt{5}}{2}\big)^1 = 1
-    \end{cases} \\
-    \\
-    \Leftrightarrow & \begin{cases}
-        F(0) = \alpha + \beta = 0 \\
-        F(1) = \alpha(1 + \sqrt{5}) + \beta(1 - \sqrt{5}) = 1
-    \end{cases} \\
-    \\
-    \Leftrightarrow & \begin{cases}
-    \alpha = \frac{1}{\sqrt{5}} \\
-    \beta = -\frac{1}{\sqrt{5}}
-    \end{cases}
-\end{aligned}
+---
 
-- Vậy 
-$$
-\begin{aligned}
-F(n) &=  \frac{1}{\sqrt{5}} \big(\frac{1 + \sqrt{5}}{2}\big)^n  -\frac{1}{\sqrt{5}} \big(\frac{1- \sqrt{5}}{2}\big)^n \\ &= \frac{1}{\sqrt{5}}\big(\phi^n - \hat{\phi} ^n \big)
-\end{aligned}
-$$
-với $\phi =  \frac{1 + \sqrt{5}}{2}$ và $\hat{\phi} ^n = \frac{1}{\phi}$. Đây chính là phương trình Binet.
+### Cách giải với hệ thuần nhất ($f(n) = 0$)  
+- Sử dụng phương trình đặc trưng:  
+  $$ar^2 + br + c = 0$$  
+
+- Giải phương trình trên cho ra 2 nghiệm $r_1, r_2$.  
+
+- Với 3 trường hợp nghiệm:  
+  1. Nếu $r_1, r_2$ là **số thực phân biệt**:  
+     $$a_n = \alpha r_1^n + \beta r_2^n$$  
+  2. Nếu $r_1 = r_2 = r$ là **nghiệm bội**:  
+     $$a_n = \alpha r^n + \beta n r^n$$  
+  3. Nếu $r_1, r_2 = u \pm iv$ là **số phức**:  
+     $$a_n = \gamma^n\big[\alpha \cos(\theta n) + \beta \sin(\theta n)\big]$$  
+     với $\gamma = \sqrt{u^2 + v^2}, \ \theta = \arctan{\frac{v}{u}}$.  
+
+---
+
+### Ví dụ: Phương trình Fibonacci  
+
+- Đặt:  
+  $$F(n) = F(n-1) + F(n-2), \quad F(0)=0, \ F(1)=1$$  
+  $$\Rightarrow F(n) - F(n-1) - F(n-2) = 0$$  
+
+- Phương trình đặc trưng:  
+  $$r^2 - r - 1 = 0$$  
+  với nghiệm:  
+  $$r_{1,2} = \frac{1 \pm \sqrt{5}}{2}$$  
+
+- Vì $r_1, r_2$ là nghiệm thực phân biệt ⇒ áp dụng công thức:  
+  $$
+  F(n) = \alpha \Big(\frac{1 + \sqrt{5}}{2}\Big)^n 
+       + \beta \Big(\frac{1 - \sqrt{5}}{2}\Big)^n
+  $$  
+
+- Thay $n=0, n=1$ vào để tìm $\alpha, \beta$:  
+  $$
+  \begin{cases}
+    F(0) = \alpha + \beta = 0 \\
+    F(1) = \alpha \frac{1+\sqrt{5}}{2} + \beta \frac{1-\sqrt{5}}{2} = 1
+  \end{cases}
+  $$  
+
+  Giải hệ:  
+  $$
+  \alpha = \tfrac{1}{\sqrt{5}}, \quad \beta = -\tfrac{1}{\sqrt{5}}
+  $$  
+
+- Vậy:  
+  $$
+  \begin{aligned}
+  F(n) &= \frac{1}{\sqrt{5}} \Big(\frac{1+\sqrt{5}}{2}\Big)^n 
+        - \frac{1}{\sqrt{5}} \Big(\frac{1-\sqrt{5}}{2}\Big)^n \\[6pt]
+       &= \frac{1}{\sqrt{5}}\Big(\phi^n - \hat{\phi}^n\Big)
+  \end{aligned}
+  $$  
+
+  với $\phi = \tfrac{1+\sqrt{5}}{2}$ (tỉ lệ vàng) và $\hat{\phi} = \tfrac{1-\sqrt{5}}{2}$.  
+
+Đây chính là **công thức Binet** của dãy Fibonacci.  
 
 
 **Các bài toán kinh điển**
@@ -122,7 +142,6 @@ với $\phi =  \frac{1 + \sqrt{5}}{2}$ và $\hat{\phi} ^n = \frac{1}{\phi}$. Đ�
 - Hanoi Tower O($2^n$) - cây
 - Segment Tree O(nlogn) - master theorem
 
-Lời giải
 
 **Bài tập về nhà**:
 
