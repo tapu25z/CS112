@@ -1,5 +1,5 @@
 # CS112
-# Mở đầu: 
+# Chủ đề 2 - Phân tích độ phức tạp thời gian của đệ quy
 - Hanoi Tower : chơi game tìm ra đường đi tối ưu và lời giải.
 
 > Đặt câu hỏi để mọi người cùng ghi ý ra trong vòng 5 phút, sau đó nhờ mọi người tìm hiểu sau đó tổng hợp lại.
