@@ -90,50 +90,6 @@ $$ax(n) + bx(n-1) + cx(n-2) = f(n)$$
      $$a_n = \gamma^n\big[\alpha \cos(\theta n) + \beta \sin(\theta n)\big]$$  
      với $\gamma = \sqrt{u^2 + v^2}, \ \theta = \arctan{\frac{v}{u}}$.  
 
----
-
-### Ví dụ: Phương trình Fibonacci  
-
-- Đặt:  
-  $$F(n) = F(n-1) + F(n-2), \quad F(0)=0, \ F(1)=1$$  
-  $$\Rightarrow F(n) - F(n-1) - F(n-2) = 0$$  
-
-- Phương trình đặc trưng:  
-  $$r^2 - r - 1 = 0$$  
-  với nghiệm:  
-  $$r_{1,2} = \frac{1 \pm \sqrt{5}}{2}$$  
-
-- Vì $r_1, r_2$ là nghiệm thực phân biệt ⇒ áp dụng công thức:  
-  $$
-  F(n) = \alpha \Big(\frac{1 + \sqrt{5}}{2}\Big)^n 
-       + \beta \Big(\frac{1 - \sqrt{5}}{2}\Big)^n
-  $$  
-
-- Thay $n=0, n=1$ vào để tìm $\alpha, \beta$:  
-  $$
-  \begin{cases}
-    F(0) = \alpha + \beta = 0 \\
-    F(1) = \alpha \frac{1+\sqrt{5}}{2} + \beta \frac{1-\sqrt{5}}{2} = 1
-  \end{cases}
-  $$  
-
-  Giải hệ:  
-  $$
-  \alpha = \tfrac{1}{\sqrt{5}}, \quad \beta = -\tfrac{1}{\sqrt{5}}
-  $$  
-
-- Vậy:  
-  $$
-  \begin{aligned}
-  F(n) &= \frac{1}{\sqrt{5}} \Big(\frac{1+\sqrt{5}}{2}\Big)^n 
-        - \frac{1}{\sqrt{5}} \Big(\frac{1-\sqrt{5}}{2}\Big)^n \\[6pt]
-       &= \frac{1}{\sqrt{5}}\Big(\phi^n - \hat{\phi}^n\Big)
-  \end{aligned}
-  $$  
-
-  với $\phi = \tfrac{1+\sqrt{5}}{2}$ (tỉ lệ vàng) và $\hat{\phi} = \tfrac{1-\sqrt{5}}{2}$.  
-
-Đây chính là **công thức Binet** của dãy Fibonacci.  
 
 
 **Các bài toán kinh điển**
