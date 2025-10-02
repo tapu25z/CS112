@@ -102,7 +102,6 @@ $$ax(n) + bx(n-1) + cx(n-2) = f(n)$$
 **Bài tập về nhà**:
 
 **BÀI 1**:
-von Neumann’s neighborhood revisited:
 Cho một ma trận ô vuông màu trắng N * N. Bắt đầu với một ô vuông bị tô đen, với mỗi một đơn vị thời gian nó sẽ tự loan màu sang các ô khác, hỏi sau n đơn vị thời gian thì có bao nhiêu ô bị loan màu.
 Tìm ra công thức truy hồi và tìm độ phức tạp thời gian.
 
