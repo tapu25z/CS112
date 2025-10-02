@@ -90,8 +90,9 @@ $$ax(n) + bx(n-1) + cx(n-2) = f(n)$$
 **Bài tập về nhà**:
 
 **BÀI 1**:
-Cho một ma trận ô vuông màu trắng N * N. Bắt đầu với một ô vuông bị tô đen, với mỗi một đơn vị thời gian nó sẽ tự loan màu sang các ô khác, hỏi sau n đơn vị thời gian thì có bao nhiêu ô bị loan màu.
-Tìm ra công thức truy hồi và tìm độ phức tạp thời gian.
+Cho một ma trận vô hạn ô vuông màu trắng. Bắt đầu với một ô vuông bị tô đen ở giữa ma trận, với mỗi một đơn vị thời gian nó sẽ tự loan màu sang các ô khác theo 4 hướng Đông-Tây-Nam-Bắc, hỏi sau $n$ đơn vị thời gian thì có bao nhiêu ô bị loan màu.
+Hãy giải bài toán bằng thuật toán đệ quy.
+Tìm ra công thức truy hồi thời gian và giải công thức truy hồi đó để tìm được độ phức tạp thuật toán.
 
 **BÀI 2**: 
 Một đầu bếp cần nấu n chiếc hamburger trên một chiếc chảo nhỏ có sức chứa tối đa 2 chiếc cùng lúc. Mỗi chiếc hamburger cần được nấu cả hai mặt, và thời gian để nấu một mặt (cho 1 hoặc 2 chiếc) là 1 phút.
