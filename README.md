@@ -6,14 +6,7 @@
 
 **Đệ quy là gì? (3 phút)**
 - Là một kỹ thuật trong lập trình và toán học, trong đó một hàm số được định nghĩa,**tính toán thông qua chính hàm đó.** Nói cách khác, đó chính là ta **chia bài toán lớn thành các bài toán nhỏ** cho tới khi chạm vào bài toán cơ sở rồi tính toán ngược ra.
-
 - Có 2 khái niệm quan trọng nhất cần được nhắc tới là **công thức truy hồi** (recurrence relation), **trường hợp cơ sở** (base-case).
-
-Công thức truy hồi: cách mô tả toán học cho thời gian chạy của thuật toán, viết thời gian chạy của bài toán kích thước n dưới dạng công thức phụ thuộc vào nó nhưng với kích thước nhỏ hơn. Biểu diễn đúng công thức truy hồi là chìa khoá để phân tích độ phức tạp của các thuật toán đệ qui.
-
-Trường hợp cơ sở: là điểm dừng của đệ qui. Nếu không có bài toán chạy đến vô hạn việc phân tích thời gian chạy trở nên vô nghĩa.
-
-
 
 **So sánh: đệ quy vs vòng lặp**
 > Chỉ ra 3 đặc điểm khác nhất
@@ -35,11 +28,9 @@ Trường hợp cơ sở: là điểm dừng của đệ qui. Nếu không có b
 Quy trình chung để phân tích thời gian của đệ quy:
 - Xác định tham số kích thước input
 - Xác định phép toán cơ bản của thuật toán
-- Với các input có cùng độ lớn thì số lần thực hiện phép toán có thay đổi dựa theo input không. Nếu có, cần phân tích riêng ba trường hợp: tốt nhất, trung bình và xấu nhất 
-> Câu hỏi: Chỉ ra ví dụ khiến độ phức tạp của phép tính thay đổi
+- Với các input có cùng độ lớn thì số lần thực hiện phép toán có thay đổi dựa theo input không. Nếu có, cần phân tích riêng ba trường hợp: tốt nhất, trung bình và xấu nhất.
 - Thiết lập công thức truy hồi và trường hợp cơ sở cho hàm $M(i)$,  với $M(i)$ là độ phức tạp thời gian để tính toán ra hàm $F(i)$.
 - Giải phương trình truy hồi 
-**(Câu hỏi: nếu không giải được chính xác hàm M(n) thì sao -> tìm bậc tăng trưởng của lời giải cho bài toán)**
 
 
 
@@ -73,8 +64,6 @@ $$ax(n) + bx(n-1) + cx(n-2) = f(n)$$
 
 **Mục tiêu phương pháp**: Tìm ra công thức dạng đóng của $f(n)$.  
 
----
-
 ### Cách giải với hệ thuần nhất ($f(n) = 0$)  
 - Sử dụng phương trình đặc trưng:  
   $$ar^2 + br + c = 0$$  
@@ -93,7 +82,6 @@ $$ax(n) + bx(n-1) + cx(n-2) = f(n)$$
 
 
 **Các bài toán kinh điển**
-> Nhờ 3 nhóm lên phân tích bằng 3 cách khác nhau
 - Fibonacci O(n) - thế
 - Hanoi Tower O($2^n$) - cây
 - Segment Tree O(nlogn) - master theorem
@@ -120,7 +108,7 @@ Giải thích tại sao thuật toán đệ quy trên không phải là chiến 
 - c. Đề xuất thuật toán tối ưu:
 Xây dựng một thuật toán khác để hoàn thành công việc trong thời gian ngắn nhất có thể và chứng minh tính hiệu quả của nó.
 
-BÀI 3. Cho đoạn code
+**BÀI 3**: Cho đoạn code
 ```python=
 def countPairs(n):
     if n <= 1:
