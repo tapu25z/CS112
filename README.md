@@ -90,8 +90,10 @@ $$ax(n) + bx(n-1) + cx(n-2) = f(n)$$
 **Bài tập về nhà**:
 
 **BÀI 1**:
-Cho một ma trận vô hạn ô vuông màu trắng. Bắt đầu với một ô vuông bị tô đen ở giữa ma trận, với mỗi một đơn vị thời gian nó sẽ tự loan màu sang các ô khác theo 4 hướng Đông-Tây-Nam-Bắc, hỏi sau $n$ đơn vị thời gian thì có bao nhiêu ô bị loan màu.
+Cho một ma trận vô hạn ô vuông màu trắng. Bắt đầu với một ô vuông bị tô đen ở giữa ma trận, với mỗi một đơn vị thời gian nó sẽ tự loan màu sang các ô khác theo 4 hướng Đông-Tây-Nam-Bắc, hỏi sau $n$ đơn vị thời gian thì có bao nhiêu ô bị loan màu. 
+
 Hãy giải bài toán bằng thuật toán đệ quy.
+
 Tìm ra công thức truy hồi thời gian và giải công thức truy hồi đó để tìm được độ phức tạp thuật toán.
 
 **BÀI 2**: 
