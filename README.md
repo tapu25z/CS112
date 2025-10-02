@@ -112,7 +112,7 @@ ar^2 + br + c = 0
 - Segment Tree O(nlogn) - master theorem
 
 
-#**Bài tập về nhà**:
+# **Bài tập về nhà**:
 
 **BÀI 1**:
 Cho một ma trận vô hạn ô vuông màu trắng. Bắt đầu với một ô vuông bị tô đen ở giữa ma trận, với mỗi một đơn vị thời gian nó sẽ tự loan màu sang các ô khác theo 4 hướng Đông-Tây-Nam-Bắc, hỏi sau $n$ đơn vị thời gian thì có bao nhiêu ô bị loan màu. 
