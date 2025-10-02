@@ -59,27 +59,52 @@ Brainstorm những phương pháp để giải công thức truy hồi.
 
 ## Phương pháp hệ thức truy hồi bậc hai với hệ số hằng  
 
-**Dạng tổng quát**:  
-$$ax(n) + bx(n-1) + cx(n-2) = f(n)$$  
+### 1. Dạng tổng quát
+Hệ thức có dạng:
 
-**Mục tiêu phương pháp**: Tìm ra công thức dạng đóng của $f(n)$.  
+\[
+aT(n) + bT(n-1) + cT(n-2) = f(n)
+\]
 
-### Cách giải với hệ thuần nhất ($f(n) = 0$)  
-- Sử dụng phương trình đặc trưng:  
-  $$ar^2 + br + c = 0$$  
+- Nếu \(f(n) = 0\) → gọi là **thuần nhất**.  
+- Nếu \(f(n) \neq 0\) → gọi là **phi đồng chất**.  
 
-- Giải phương trình trên cho ra 2 nghiệm $r_1, r_2$.  
+Mục tiêu: tìm **công thức dạng đóng** cho \(T(n)\).  
 
-- Với 3 trường hợp nghiệm:  
-  1. Nếu $r_1, r_2$ là **số thực phân biệt**:  
-     $$a_n = \alpha r_1^n + \beta r_2^n$$  
-  2. Nếu $r_1 = r_2 = r$ là **nghiệm bội**:  
-     $$a_n = \alpha r^n + \beta n r^n$$  
-  3. Nếu $r_1, r_2 = u \pm iv$ là **số phức**:  
-     $$a_n = \gamma^n\big[\alpha \cos(\theta n) + \beta \sin(\theta n)\big]$$  
-     với $\gamma = \sqrt{u^2 + v^2}, \ \theta = \arctan{\frac{v}{u}}$.  
+### 2. Cách giải hệ thuần nhất (\(f(n)=0\))
 
+#### **Bước 1:** Lập phương trình đặc trưng  
+\[
+ar^2 + br + c = 0
+\]
 
+#### **Bước 2:** Giải phương trình để tìm nghiệm \(r_1, r_2\).  
+
+#### **Bước 3:** Viết nghiệm tổng quát tùy theo trường hợp  
+
+- **Trường hợp 1:** Hai nghiệm thực phân biệt \(r_1, r_2\)  
+  \[
+  T(n) = \alpha r_1^n + \beta r_2^n
+  \]
+
+- **Trường hợp 2:** Nghiệm kép \(r_1 = r_2 = r\)  
+  \[
+  T(n) = (\alpha + \beta n) r^n
+  \]
+
+- **Trường hợp 3:** Nghiệm phức liên hợp \(r_{1,2} = u \pm iv\)  
+  Gọi:  
+  \[
+  \gamma = \sqrt{u^2+v^2}, \quad \theta = \arctan\left(\tfrac{v}{u}\right)
+  \]  
+  Khi đó:  
+  \[
+  T(n) = \gamma^n \left[ \alpha \cos(n\theta) + \beta \sin(n\theta) \right]
+  \]
+
+#### **Bước 4:** Thay điều kiện đầu (ví dụ \(T(0), T(1)\)) để tìm hằng số \(\alpha, \beta\).  
+
+---
 
 **Các bài toán kinh điển**
 - Fibonacci O(n) - thế
@@ -87,7 +112,7 @@ $$ax(n) + bx(n-1) + cx(n-2) = f(n)$$
 - Segment Tree O(nlogn) - master theorem
 
 
-**Bài tập về nhà**:
+#**Bài tập về nhà**:
 
 **BÀI 1**:
 Cho một ma trận vô hạn ô vuông màu trắng. Bắt đầu với một ô vuông bị tô đen ở giữa ma trận, với mỗi một đơn vị thời gian nó sẽ tự loan màu sang các ô khác theo 4 hướng Đông-Tây-Nam-Bắc, hỏi sau $n$ đơn vị thời gian thì có bao nhiêu ô bị loan màu. 
