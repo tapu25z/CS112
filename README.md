@@ -1,4 +1,5 @@
 # CS112 - Chủ đề 2 - Phân tích độ phức tạp thời gian của đệ quy
+Link drive các file liên quan khác: https://drive.google.com/drive/folders/1IuP9MwowUDMST8vLPuAkoKHCV9SJwEW_?usp=sharing
 # Mở đầu
 - Hanoi Tower : chơi game tìm ra đường đi tối ưu và lời giải.
 **Đệ quy là gì?**
@@ -59,5 +60,5 @@ def countPairs(n):
 ```
 Hãy phân tích độ phức tap thời gian thuật toán theo quy trình chung. 
 
-Link drive các file liên quan khác: https://drive.google.com/drive/folders/1IuP9MwowUDMST8vLPuAkoKHCV9SJwEW_?usp=sharing
+
 
