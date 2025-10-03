@@ -15,16 +15,11 @@
 
 
 # Phân tích đệ quy (Cách giải hệ thức truy hồi)
-
-## Phương pháp thế (Substitution Method) (tiến + lùi)
-
-## Phương pháp cây đệ qui (Recurrence Tree Method) 
-
-## Phương pháp Master Theorem
-
-## Phương pháp hệ thức truy hồi bậc hai với hệ số hằng  
-
-## Phương pháp hàm sinh
+- Phương pháp thế (Substitution Method) (tiến + lùi)
+- Phương pháp cây đệ qui (Recurrence Tree Method) 
+- Phương pháp Master Theorem
+- Phương pháp hệ thức truy hồi bậc hai với hệ số hằng  
+- Phương pháp hàm sinh
 
 
 
