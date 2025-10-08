@@ -1,9 +1,9 @@
 # CS112 - Chủ đề 2 - Phân tích độ phức tạp thời gian của đệ quy
-Link drive các file liên quan khác: https://drive.google.com/drive/folders/1IuP9MwowUDMST8vLPuAkoKHCV9SJwEW_?usp=sharing
+Link drive Slide + BTVN + Quiz: https://drive.google.com/drive/folders/1IuP9MwowUDMST8vLPuAkoKHCV9SJwEW_?usp=sharing
+
 # Mở đầu
-- Hanoi Tower : chơi game tìm ra đường đi tối ưu và lời giải.
-**Đệ quy là gì?**
-**So sánh: đệ quy vs vòng lặp**
+- **Đệ quy là gì?**
+- **So sánh: đệ quy vs vòng lặp**
 
 
 # Quy trình chung để phân tích thời gian của đệ quy
@@ -12,7 +12,6 @@ Link drive các file liên quan khác: https://drive.google.com/drive/folders/1I
 - Với các input có cùng độ lớn thì số lần thực hiện phép toán có thay đổi dựa theo input không. Nếu có, cần phân tích riêng ba trường hợp: tốt nhất, trung bình và xấu nhất.
 - Thiết lập công thức truy hồi và trường hợp cơ sở cho hàm $M(i)$,  với $M(i)$ là độ phức tạp thời gian để tính toán ra hàm $F(i)$.
 - Giải phương trình truy hồi 
-
 
 
 # Phân tích đệ quy (Cách giải hệ thức truy hồi)
