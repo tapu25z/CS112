@@ -32,12 +32,15 @@ Hãy giải bài toán bằng thuật toán đệ quy.
 
 Tìm ra công thức truy hồi thời gian và giải công thức truy hồi đó để tìm được độ phức tạp thuật toán.
 
+---
+
 **BÀI 2**: 
 Một đầu bếp cần nấu n chiếc hamburger trên một chiếc chảo nhỏ có sức chứa tối đa 2 chiếc cùng lúc. Mỗi chiếc hamburger cần được nấu cả hai mặt, và thời gian để nấu một mặt (cho 1 hoặc 2 chiếc) là 1 phút.
 
 Một thuật toán đệ quy được đề xuất như sau:
 Trường hợp cơ sở (n ≤ 2): Nếu có 1 hoặc 2 chiếc, nấu tuần tự 2 mặt của chúng.
 Đệ quy (n > 2): Chọn 2 chiếc bất kỳ, nấu cả 2 mặt của chúng. Sau đó, giải quyết bài toán còn lại cho n - 2 chiếc.
+
 
 Yêu cầu:
 - a. Xây dựng và giải hệ thức truy hồi:
@@ -47,6 +50,7 @@ Giải thích tại sao thuật toán đệ quy trên không phải là chiến 
 - c. Đề xuất thuật toán tối ưu:
 Xây dựng một thuật toán khác để hoàn thành công việc trong thời gian ngắn nhất có thể và chứng minh tính hiệu quả của nó.
 
+---
 **BÀI 3**: Cho đoạn code
 ```python=
 def countPairs(n):
