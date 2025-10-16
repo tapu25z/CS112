@@ -1,5 +1,8 @@
 # CS112 - Chủ đề 2 - Phân tích độ phức tạp thời gian của đệ quy
+
 Link drive Slide + BTVN + Quiz: https://drive.google.com/drive/folders/1IuP9MwowUDMST8vLPuAkoKHCV9SJwEW_?usp=sharing
+
+Link điểm BTVN: https://drive.google.com/drive/folders/1ZuccEq2skoc2PSNHn622sMLG1APe03O_ZewOMtWSFHP4F65jb4ifgGH1S06Dyhm9-Iqft0IN?usp=sharing
 
 # Mở đầu
 - **Đệ quy là gì?**
